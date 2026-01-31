@@ -53,9 +53,9 @@ const HeroSection = () => {
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/20 bg-primary/5 opacity-0 animate-fade-in"
               style={{ animationDelay: "0.1s" }}
             >
-              <Sparkles className="h-4 w-4 text-primary" />
+            <Sparkles className="h-4 w-4 text-primary" />
               <span className="text-sm font-medium text-primary">
-                Your Trusted Education Partner in Riyadh
+                Your Trusted Education Partner in Saudi Arabia
               </span>
             </div>
 
@@ -73,7 +73,7 @@ const HeroSection = () => {
             >
               Empowering students to make confident, informed academic and
               career decisions. Your trusted education and career guidance
-              partner — right here in Riyadh.
+              partner — right here in Saudi Arabia.
             </p>
 
             <div

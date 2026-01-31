@@ -35,7 +35,24 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real app, this would send to a backend
+    
+    // Format the WhatsApp message
+    const message = `*New Inquiry from Zelha Website*
+
+*Full Name:* ${formData.name}
+*Phone Number:* ${formData.phone}
+*Email Address:* ${formData.email}
+*Service Interested In:* ${formData.service || 'Not specified'}
+
+*Message:*
+${formData.message}`;
+
+    // Encode the message for URL
+    const encodedMessage = encodeURIComponent(message);
+    
+    // Open WhatsApp with the formatted message
+    window.open(`https://api.whatsapp.com/send?phone=966532954117&text=${encodedMessage}`, '_blank');
+    
     setIsSubmitted(true);
   };
 
@@ -93,6 +110,12 @@ const Contact = () => {
                         className="text-muted-foreground hover:text-primary transition-colors block"
                       >
                         0541811151
+                      </a>
+                      <a
+                        href="tel:0534709134"
+                        className="text-muted-foreground hover:text-primary transition-colors block"
+                      >
+                        0534709134
                       </a>
                     </div>
                   </div>

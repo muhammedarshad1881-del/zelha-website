@@ -91,6 +91,12 @@ const Footer = () => {
                   >
                     0541811151
                   </a>
+                  <a
+                    href="tel:0534709134"
+                    className="text-primary-foreground/70 hover:text-primary-foreground transition-colors block"
+                  >
+                    0534709134
+                  </a>
                 </div>
               </li>
               <li className="flex items-center gap-3">

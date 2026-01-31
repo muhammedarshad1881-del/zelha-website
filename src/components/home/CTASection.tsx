@@ -18,10 +18,10 @@ const CTASection = () => {
           </h2>
 
           <p className="text-lg text-primary-foreground/80">
-            Our Riyadh-based team is here to support you every step of the way.
+            Our Saudi Arabia-based team is here to support you every step of the way.
           </p>
 
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 flex-wrap">
             <a
               href="tel:0532954117"
               className="flex items-center gap-2 text-primary-foreground hover:text-primary-foreground/80 transition-colors"
@@ -36,6 +36,14 @@ const CTASection = () => {
             >
               <Phone className="h-5 w-5" />
               <span className="font-semibold">0541811151</span>
+            </a>
+            <span className="hidden sm:inline text-primary-foreground/50">|</span>
+            <a
+              href="tel:0534709134"
+              className="flex items-center gap-2 text-primary-foreground hover:text-primary-foreground/80 transition-colors"
+            >
+              <Phone className="h-5 w-5" />
+              <span className="font-semibold">0534709134</span>
             </a>
           </div>
 
