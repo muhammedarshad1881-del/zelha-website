@@ -121,16 +121,16 @@ ${formData.message}`;
                     <div>
                       <h3 className="font-semibold text-foreground">Phone</h3>
                       <a
+                        href="tel:0532954117"
+                        className="text-muted-foreground hover:text-primary transition-colors block font-semibold"
+                      >
+                        0532954117
+                      </a>
+                      <a
                         href="tel:0541811151"
                         className="text-muted-foreground hover:text-primary transition-colors block"
                       >
                         0541811151
-                      </a>
-                      <a
-                        href="tel:0534709134"
-                        className="text-muted-foreground hover:text-primary transition-colors block"
-                      >
-                        0534709134
                       </a>
                     </div>
                   </div>

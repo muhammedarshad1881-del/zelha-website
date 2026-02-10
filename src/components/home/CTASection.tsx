@@ -23,19 +23,19 @@ const CTASection = () => {
 
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 flex-wrap">
             <a
+              href="tel:0532954117"
+              className="flex items-center gap-2 text-primary-foreground hover:text-primary-foreground/80 transition-colors bg-primary-foreground/20 px-4 py-2 rounded-lg font-semibold"
+            >
+              <Phone className="h-5 w-5" />
+              <span>0532954117</span>
+            </a>
+            <span className="hidden sm:inline text-primary-foreground/50">|</span>
+            <a
               href="tel:0541811151"
               className="flex items-center gap-2 text-primary-foreground hover:text-primary-foreground/80 transition-colors"
             >
               <Phone className="h-5 w-5" />
               <span className="font-semibold">0541811151</span>
-            </a>
-            <span className="hidden sm:inline text-primary-foreground/50">|</span>
-            <a
-              href="tel:0534709134"
-              className="flex items-center gap-2 text-primary-foreground hover:text-primary-foreground/80 transition-colors"
-            >
-              <Phone className="h-5 w-5" />
-              <span className="font-semibold">0534709134</span>
             </a>
           </div>
 
