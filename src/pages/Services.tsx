@@ -12,6 +12,7 @@ import Footer from "@/components/layout/Footer";
 import CTASection from "@/components/home/CTASection";
 import NajdiIcon from "@/components/decorative/NajdiIcon";
 import WaveDivider from "@/components/decorative/WaveDivider";
+import { useSeo } from "@/hooks/use-seo";
 
 interface ServiceDetail {
   icon: LucideIcon;
@@ -99,6 +100,23 @@ const services: ServiceDetail[] = [
 ];
 
 const Services = () => {
+  useSeo({
+    title: "Education Services | Career Guidance & University Admissions",
+    description: "Zelha Education offers career assessments, university admissions support, study abroad consulting, and scholarship guidance for GCC students.",
+    keywords: "education services, career assessments, university admissions, study abroad, scholarship guidance, career counseling",
+    canonicalUrl: "https://zelha-education.com/services",
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Education Consulting Services",
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Zelha Education Consultancy"
+      },
+      "areaServed": ["SA", "AE", "KW", "QA", "BH", "OM"],
+      "serviceType": ["Career Counseling", "University Admissions", "Study Abroad Consulting", "Scholarship Support"]
+    },
+  });
   return (
     <div className="min-h-screen bg-background">
       <Navbar />

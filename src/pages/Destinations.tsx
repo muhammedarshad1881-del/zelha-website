@@ -5,6 +5,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import CTASection from "@/components/home/CTASection";
 import WaveDivider from "@/components/decorative/WaveDivider";
+import { useSeo } from "@/hooks/use-seo";
 
 interface Destination {
   country: string;
@@ -92,6 +93,30 @@ const destinations: Destination[] = [
 ];
 
 const Destinations = () => {
+  useSeo({
+    title: "Study Destinations | Global Education Opportunities",
+    description: "Explore top study destinations for GCC students. Get guidance on UK, USA, Canada, Australia, Malaysia, Turkey, and local universities.",
+    keywords: "study abroad destinations, international universities, study in UK, study in USA, study abroad guidance, global education",
+    canonicalUrl: "https://zelha-education.com/destinations",
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://zelha-education.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Study Destinations",
+          "item": "https://zelha-education.com/destinations"
+        }
+      ]
+    },
+  });
   return (
     <div className="min-h-screen bg-background">
       <Navbar />

@@ -13,6 +13,7 @@ import {
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import NajdiIcon from "@/components/decorative/NajdiIcon";
+import { useSeo } from "@/hooks/use-seo";
 
 const services = [
   "Career Assessments & Counselling",
@@ -24,6 +25,26 @@ const services = [
 ];
 
 const Contact = () => {
+  useSeo({
+    title: "Contact Us | Get in Touch with Zelha Education",
+    description: "Contact Zelha Education Consultancy in Riyadh for career guidance, university admissions support, and study abroad consulting. Reach us by phone or WhatsApp.",
+    keywords: "contact Zelha Education, education consultancy contact, career guidance consultation, student services",
+    canonicalUrl: "https://zelha-education.com/contact",
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "Contact Zelha Education Consultancy",
+      "organization": {
+        "@type": "EducationalOrganization",
+        "name": "Zelha Education Consultancy",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "SA",
+          "addressLocality": "Riyadh"
+        }
+      }
+    },
+  });
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -51,7 +72,7 @@ ${formData.message}`;
     const encodedMessage = encodeURIComponent(message);
     
     // Open WhatsApp with the formatted message
-    window.open(`https://api.whatsapp.com/send?phone=966532954117&text=${encodedMessage}`, '_blank');
+    window.open(`https://api.whatsapp.com/send?phone=966541811151&text=${encodedMessage}`, '_blank');
     
     setIsSubmitted(true);
   };
@@ -100,12 +121,6 @@ ${formData.message}`;
                     <div>
                       <h3 className="font-semibold text-foreground">Phone</h3>
                       <a
-                        href="tel:0532954117"
-                        className="text-muted-foreground hover:text-primary transition-colors block"
-                      >
-                        0532954117
-                      </a>
-                      <a
                         href="tel:0541811151"
                         className="text-muted-foreground hover:text-primary transition-colors block"
                       >
@@ -141,7 +156,7 @@ ${formData.message}`;
                     responses.
                   </p>
                   <a
-                    href="https://wa.me/966532954117"
+                    href="https://wa.me/966541811151"
                     target="_blank"
                     rel="noopener noreferrer"
                   >

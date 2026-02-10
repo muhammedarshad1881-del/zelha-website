@@ -60,12 +60,32 @@ const ServicesPreview = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service, index) => (
+          {services.slice(0, 3).map((service, index) => (
             <div
               key={service.title}
               className="group bg-background rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-border hover:border-primary/20"
               style={{
                 animationDelay: `${index * 0.1}s`,
+              }}
+            >
+              <NajdiIcon icon={service.icon} className="mb-4" />
+              <h3 className="text-xl font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
+                {service.title}
+              </h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                {service.description}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        <div className="flex flex-wrap justify-center gap-6 mt-6">
+          {services.slice(3).map((service, index) => (
+            <div
+              key={service.title}
+              className="group bg-background rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-border hover:border-primary/20 w-full max-w-sm md:w-auto"
+              style={{
+                animationDelay: `${(index + 3) * 0.1}s`,
               }}
             >
               <NajdiIcon icon={service.icon} className="mb-4" />

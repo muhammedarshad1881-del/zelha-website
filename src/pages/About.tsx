@@ -4,6 +4,7 @@ import Footer from "@/components/layout/Footer";
 import CTASection from "@/components/home/CTASection";
 import NajdiIcon from "@/components/decorative/NajdiIcon";
 import WaveDivider from "@/components/decorative/WaveDivider";
+import { useSeo } from "@/hooks/use-seo";
 
 const values = [
   { icon: Heart, name: "Integrity" },
@@ -21,6 +22,18 @@ const philosophyPoints = [
 ];
 
 const About = () => {
+  useSeo({
+    title: "About Us | Education Consultancy Experts",
+    description: "Learn about Zelha Education Consultancy's mission, vision, and values. We provide expert guidance for GCC students pursuing higher education and career success.",
+    keywords: "about Zelha Education, education consultancy, career guidance experts, GCC education, student counseling",
+    canonicalUrl: "https://zelha-education.com/about",
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      "name": "About Zelha Education Consultancy",
+      "description": "Zelha Education Consultancy - Expert career guidance and university admissions support",
+    },
+  });
   return (
     <div className="min-h-screen bg-background">
       <Navbar />

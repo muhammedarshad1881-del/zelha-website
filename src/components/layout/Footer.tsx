@@ -80,12 +80,6 @@ const Footer = () => {
                 <Phone className="h-4 w-4 mt-1 flex-shrink-0" />
                 <div className="text-sm">
                   <a
-                    href="tel:0532954117"
-                    className="text-primary-foreground/70 hover:text-primary-foreground transition-colors block"
-                  >
-                    0532954117
-                  </a>
-                  <a
                     href="tel:0541811151"
                     className="text-primary-foreground/70 hover:text-primary-foreground transition-colors block"
                   >

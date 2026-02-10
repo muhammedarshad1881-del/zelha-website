@@ -5,6 +5,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import CTASection from "@/components/home/CTASection";
 import WaveDivider from "@/components/decorative/WaveDivider";
+import { useSeo } from "@/hooks/use-seo";
 
 interface Testimonial {
   quote: string;
@@ -59,6 +60,24 @@ const testimonials: Testimonial[] = [
 ];
 
 const Testimonials = () => {
+  useSeo({
+    title: "Testimonials | Success Stories from GCC Students",
+    description: "Read success stories from students and parents who've benefited from Zelha Education's career guidance and university admissions support.",
+    keywords: "success stories, student testimonials, education consultancy reviews, career guidance results",
+    canonicalUrl: "https://zelha-education.com/testimonials",
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": "ReviewPage",
+      "name": "Zelha Education Testimonials",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "50"
+      }
+    },
+  });
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
