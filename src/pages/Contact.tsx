@@ -72,7 +72,7 @@ ${formData.message}`;
     const encodedMessage = encodeURIComponent(message);
     
     // Open WhatsApp with the formatted message
-    window.open(`https://api.whatsapp.com/send?phone=966541811151&text=${encodedMessage}`, '_blank');
+    window.open(`https://api.whatsapp.com/send?phone=9660532954117&text=${encodedMessage}`, '_blank');
     
     setIsSubmitted(true);
   };
@@ -156,7 +156,7 @@ ${formData.message}`;
                     responses.
                   </p>
                   <a
-                    href="https://wa.me/966541811151"
+                    href="https://wa.me/9660532954117"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
